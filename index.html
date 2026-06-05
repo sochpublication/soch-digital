@@ -91,8 +91,11 @@
             gap: 25px;
             margin-top: 25px;
         }
-        @media (max-width: 650px) {
+        @media (max-width: 768px) {
             .grid { grid-template-columns: 1fr; }
+            .card { flex-direction: column; text-align: center; }
+            .book-layout { flex-direction: column !important; align-items: center; text-align: center; }
+            .book-cover { margin-right: 0 !important; margin-bottom: 15px; }
         }
         .card {
             background: #fff;
@@ -107,26 +110,33 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.08);
         }
+        .book-layout {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .book-cover {
+            width: 110px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .book-info {
+            flex: 1;
+        }
         .card h3 {
             margin-top: 0;
             color: var(--primary);
             font-size: 1.4rem;
+            margin-bottom: 10px;
         }
-        .btn {
+        .amazon-badge {
             display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 1rem;
             margin-top: 15px;
-            transition: background 0.3s;
+            transition: transform 0.2s;
         }
-        .btn:hover {
-            background: #1f3a52;
-            color: var(--accent);
+        .amazon-badge:hover {
+            transform: scale(1.05);
         }
         .social-links {
             margin-top: 15px;
@@ -168,6 +178,7 @@
 
     <div class="container">
         
+        <!-- About Us Section -->
         <div class="section">
             <h2>About Us</h2>
             
@@ -190,32 +201,47 @@
             </div>
         </div>
 
+        <!-- Featured Books Section -->
         <div class="section">
             <h2>Our Masterpieces (Featured Books)</h2>
             <div class="grid">
+                
+                <!-- Book 1: Bhakti Gatha -->
                 <div class="card">
-                    <h3>Bhakti Gatha</h3>
-                    <p>A profound and unique collection of spiritual poetry and deep emotions that offers readers a serene and uplifting soulful experience.</p>
-                    <a href="#" class="btn">Buy on Amazon</a>
+                    <div class="book-layout">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/71t4GuxD1bL.jpg" alt="Bhakti Gatha Cover" class="book-cover">
+                        <div class="book-info">
+                            <h3>Bhakti Gatha</h3>
+                            <p style="font-size: 1rem; margin-bottom: 10px;">A profound and unique collection of spiritual poetry and deep emotions that offers readers a serene and uplifting soulful experience.</p>
+                            <!-- NOTE: Replace PASTE_YOUR_AMAZON_LINK_HERE with your exact Amazon link -->
+                            <a href="PASTE_YOUR_AMAZON_LINK_HERE" target="_blank" class="amazon-badge">
+                                <img src="https://img.shields.io/badge/Buy_on-Amazon-orange?style=for-the-badge&logo=amazon" alt="Buy on Amazon">
+                            </a>
+                        </div>
+                    </div>
                 </div>
+                
+                <!-- Book 2: Upcoming Release -->
                 <div class="card">
                     <h3>Upcoming Release</h3>
-                    <p>Discover our next celebrated literary work. Stay tuned for more details about our upcoming masterpieces.</p>
-                    <a href="#" class="btn">View Details</a>
+                    <p style="font-size: 1rem;">Discover our next celebrated literary work. Stay tuned for more details about our upcoming masterpieces.</p>
                 </div>
+                
             </div>
         </div>
 
+        <!-- Magazines & Newspapers Section -->
         <div class="section">
             <h2>Monthly Magazines & Newspapers</h2>
             <p>Expanding upon this phenomenal success, the publication house is set to launch grand monthly magazines and newspapers. We are thrilled to announce that the very first issue of <strong>"Soch Magazine"</strong> will be officially released very soon.</p>
         </div>
 
+        <!-- Contact Section -->
         <div class="section">
             <h2>Get In Touch (Contact)</h2>
             <p>If you are an author looking to get your manuscript published with dignity or wish to collaborate with us on our upcoming literary ventures, please feel free to reach out:</p>
             
-            <p>📧 <strong>Email:</strong> info@sochpublication.com<br>
+            <p>📧 <strong>Email:</strong> <a href="mailto:info@sochpublication.com" style="color: var(--primary); font-weight: bold; text-decoration: none;">info@sochpublication.com</a><br>
             📍 <strong>Centers:</strong> Ahmedabad | Mumbai | Delhi</p>
             
             <hr style="border: 0; border-top: 1px solid #eef2f5; margin: 20px 0;">
@@ -231,7 +257,7 @@
     </div>
 
     <footer>
-        <p>© 2026 Soch Publication House. All Rights Reserved.</p>
+        <p>© 2025 Soch Publication House. All Rights Reserved.</p>
     </footer>
 
 </body>
