@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soch Publication House</title>
+    <style>
+        :root {
+            --primary: #112233; 
+            --accent: #d4af37;  
+            --text: #333333;
+            --bg: #fdfdfd;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            background-color: var(--bg);
+        }
+        header {
+            background: linear-gradient(135deg, #112233 0%, #1f3a52 100%);
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        header p {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-top: 15px;
+            font-style: italic;
+        }
+        .container {
+            max-width: 950px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .section {
+            background: #ffffff;
+            padding: 35px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--primary);
+            border-left: 5px solid var(--accent);
+            padding-left: 15px;
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+        p {
+            font-size: 1.15rem;
+            color: #4a4a4a;
+            text-align: justify;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 25px;
+        }
+        @media (max-width: 650px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #eef2f5;
+            border-radius: 6px;
+            padding: 25px;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #1f3a52;
+            color: var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding: 35px;
+            background: var(--primary);
+            color: #fff;
+            margin-top: 80px;
+            font-size: 1rem;
+            border-top: 4px solid var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Soch Publication House</h1>
+        <p>साहित्य जगत में एक सशक्त और आधुनिक पहचान</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="section">
+            <h2>हमारे बारे में (About Us)</h2>
+            <p>सोच पब्लिकेशन भाईस साहित्य के क्षेत्र में नए और स्थापित लेखकों को एक वैश्विक मंच प्रदान करने के लिए प्रतिबद्ध है। स्थापना के मात्र एक वर्ष के अत्यंत अल्प समय में ही इस संस्थान ने 100 से अधिक पुस्तकों को गरिमापूर्ण ढंग से प्रकाशित कर साहित्य जगत में अपनी एक सशक्त उपस्थिति दर्ज कराई है। हमारा मुख्य संचालन अहमदाबाद, मुंबई और दिल्ली जैसे प्रमुख शहरों से होता है।</p>
+        </div>
+
+        <div class="section">
+            <h2>हमारी उत्कृष्ट कृतियाँ (Featured Books)</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>भक्ति गाथा (Bhakti Gatha)</h3>
+                    <p>श्रद्धा, काव्य और गहरी संवेदनाओं से सराबोर एक ऐसा अनूठा संग्रह जो पाठकों को आत्मिक शांति का अनुभव कराता है।</p>
+                    <a href="#" class="btn">Buy on Amazon</a>
+                </div>
+                <div class="card">
+                    <h3>आगामी पुस्तक (New Release)</h3>
+                    <p>यहाँ अपनी दूसरी प्रसिद्ध या आने वाली पुस्तक की जानकारी जोड़ें।</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>मासिक पत्रिकाएं (Our Magazines)</h2>
+            <p>संस्थान अपनी इस अभूतपूर्व सफलता को और अधिक विस्तार देते हुए निकट भविष्य में दो भव्य मासिक पत्रिकाओं का शुभारंभ करने जा रहा है, जिसमें <strong>"Soch Magazine"</strong> का प्रथम अंक अत्यंत शीघ्र आपके समक्ष होगा।</p>
+        </div>
+
+        <div class="section">
+            <h2>संपर्क सूत्र (Connect With Us)</h2>
+            <p>यदि आप अपनी पाण्डुलिपि (Manuscript) का प्रकाशन करवाना चाहते हैं या हमारे आगामी प्रोजेक्ट्स का हिस्सा बनना चाहते हैं, तो हमसे संपर्क करें:</p>
+            <p>📧 <strong>Email:</strong> info@sochpublication.com<br>
+            📍 <strong>केन्द्र:</strong> Ahmedabad | Mumbai | Delhi</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Soch Publication House. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
